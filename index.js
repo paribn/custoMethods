@@ -65,23 +65,42 @@
 
 /// ------------------
   
-function customReduce(arr, callback, initialValue) {
-  let accumulator = initialValue !== undefined ? initialValue : arr[0];
-  let startIndex = initialValue !== undefined ? 0 : 1;
+// function customReduce(arr, callback, initialValue) {
+//   let accumulator = initialValue !== undefined ? initialValue : arr[0];
+//   let startIndex = initialValue !== undefined ? 0 : 1;
 
-  for (let i = startIndex; i < arr.length; i++) {
-    accumulator = callback(accumulator, arr[i], i, arr);
-  }
+//   for (let i = startIndex; i < arr.length; i++) {
+//     accumulator = callback(accumulator, arr[i], i, arr);
+//   }
 
-  return accumulator;
-}
+//   return accumulator;
+// }
 
 
-const numbers = [1,9,9,9];
+// const numbers = [1,9,9,9];
 
-const sum = customReduce(numbers, (acc, current) => acc + current, 0);
-console.log(sum); 
+// const sum = customReduce(numbers, (acc, current) => acc + current, 0);
+// console.log(sum); 
 
 /// ------------------
 
+
+function indexOf(arr, searchElement) {
+  if (0 < 0) {
+    fromIndex = Math.max(0, arr.length + 0);
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === searchElement) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+const names = ['peri','beyim','janna','theWeeknd'];
+
+const index1 = indexOf(names, 'theWeeknd');
+console.log(index1);
 
